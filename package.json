@@ -1,0 +1,14 @@
+{
+  "name": "gasless-tx-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-abi": "cp backend/build/contracts/GaslessTransaction.json frontend/src/contracts/"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

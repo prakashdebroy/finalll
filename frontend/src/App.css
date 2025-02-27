@@ -1,0 +1,138 @@
+/* General Styling */
+body {
+  background: linear-gradient(to right, #0f172a, #1e293b); /* Dark Blue to Black */
+  color: white;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* App Container */
+.App {
+  text-align: center;
+  background: linear-gradient(to right, #1e3a8a, #3b82f6); /* Gradient Blue */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  max-width: 400px;
+  width: 90%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.App:hover {
+  transform: scale(1.02);
+}
+
+/* Input Fields */
+input {
+  display: block;
+  margin: 15px auto;
+  padding: 12px;
+  width: 85%;
+  max-width: 300px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Buttons */
+button {
+  margin: 15px;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #2563eb, #3b82f6, #60a5fa);
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px rgba(59, 130, 246, 0.6);
+  overflow: hidden;
+}
+
+/* RGB Border Animation */
+button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, red, blue, green, cyan, purple, yellow, red);
+  z-index: -1;
+  border-radius: 12px;
+  filter: blur(5px);
+  animation: rgbBorder 4s linear infinite;
+}
+
+/* Button Hover Effect */
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #1d4ed8, #2563eb, #3b82f6);
+}
+
+/* Button Click Effect */
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+}
+
+/* RGB Animation */
+@keyframes rgbBorder {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Account Display */
+h2 {
+  font-size: 18px;
+  background: linear-gradient(to right, cyan, white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Transaction Section */
+.transaction-box {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: 0.3s ease;
+}
+
+.transaction-box:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {
+    width: 95%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
