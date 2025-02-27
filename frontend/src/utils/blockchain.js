@@ -63,6 +63,7 @@ export const loginWithPrivateKey = async (privateKey) => {
 
     const account = web3.eth.accounts.privateKeyToAccount(privateKey);
     web3.eth.accounts.wallet.add(account);
+    web3.eth.defaultAccount = account.address;
     selectedAccount = account.address;
 
     console.log("Logged in with Private Key:", selectedAccount);
@@ -82,7 +83,7 @@ export const sendGaslessTransaction = async (to, amount) => {
   try {
     if (!contract) throw new Error("Contract not initialized");
 
-    const gaslessTx = await contract.methods.sendTransaction(to, amount).send({
+    const gaslessTx = await contract.methods.transfer(to, amount, "0x").send({
       from: selectedAccount,
       gas: 1000000,
     });

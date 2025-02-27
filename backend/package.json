@@ -6,13 +6,15 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-abi": "powershell -Command \"New-Item -ItemType Directory -Force ../frontend/src/contracts; Copy-Item -Path build/contracts/*.json -Destination ../frontend/src/contracts/ -Force\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "keytar": "^7.9.0",
     "web3": "^1.10.0"
   }
 }

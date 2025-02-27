@@ -1,8 +1,8 @@
 /* General Styling */
 body {
-  background: linear-gradient(to right, #0f172a, #1e293b); /* Dark Blue to Black */
-  color: white;
-  font-family: "Poppins", sans-serif;
+  background: #0d1117; /* Dark GitHub-like background */
+  color: #e6edf3; /* Light text */
+  font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,117 +13,88 @@ body {
 /* App Container */
 .App {
   text-align: center;
-  background: linear-gradient(to right, #1e3a8a, #3b82f6); /* Gradient Blue */
+  background: #161b22; /* Darker container */
   padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 420px;
   width: 90%;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .App:hover {
-  transform: scale(1.02);
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Input Fields */
 input {
   display: block;
-  margin: 15px auto;
+  margin: 12px auto;
   padding: 12px;
-  width: 85%;
-  max-width: 300px;
-  border: none;
+  width: 90%;
+  max-width: 320px;
+  border: 1px solid #30363d;
   border-radius: 8px;
   outline: none;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 16px;
+  background: #21262d;
+  color: #e6edf3;
+  font-size: 15px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: border 0.3s ease, transform 0.2s ease;
 }
 
 input:focus {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
+  border: 1px solid #58a6ff;
+  transform: scale(1.02);
 }
 
 /* Buttons */
 button {
   margin: 15px;
-  padding: 12px 25px;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
   border: none;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #2563eb, #3b82f6, #60a5fa);
+  border-radius: 8px;
+  background: #238636; /* GitHub-style green */
   color: white;
   text-transform: uppercase;
   position: relative;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 0px 10px rgba(59, 130, 246, 0.6);
-  overflow: hidden;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* RGB Border Animation */
-button::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, red, blue, green, cyan, purple, yellow, red);
-  z-index: -1;
-  border-radius: 12px;
-  filter: blur(5px);
-  animation: rgbBorder 4s linear infinite;
-}
-
-/* Button Hover Effect */
 button:hover {
-  transform: scale(1.1);
-  background: linear-gradient(90deg, #1d4ed8, #2563eb, #3b82f6);
+  background: #2ea043;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(46, 160, 67, 0.3);
 }
 
-/* Button Click Effect */
 button:active {
-  transform: scale(0.95);
-  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
-}
-
-/* RGB Animation */
-@keyframes rgbBorder {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    filter: hue-rotate(360deg);
-  }
+  transform: scale(0.96);
+  box-shadow: 0px 2px 4px rgba(46, 160, 67, 0.5);
 }
 
 /* Account Display */
 h2 {
   font-size: 18px;
-  background: linear-gradient(to right, cyan, white);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #58a6ff;
+  font-weight: 500;
 }
 
 /* Transaction Section */
 .transaction-box {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  padding: 18px;
+  background: #21262d;
+  border-radius: 8px;
   margin-top: 20px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  border: 1px solid #30363d;
   transition: 0.3s ease;
 }
 
 .transaction-box:hover {
-  transform: scale(1.03);
+  border-color: #58a6ff;
 }
 
 /* Responsive Design */
